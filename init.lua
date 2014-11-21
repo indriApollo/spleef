@@ -117,7 +117,7 @@ local function placespleef(playerpos,facedir,spleef_size,space,nlevels,nodename,
 	dumpNodesToFile(nodes,pos1,pos2) -- the old nodes are saved
 
 	local air_id = minetest.get_content_id("air")
-	local spleef_node_id = minetest.get_content_id("default:"..nodename)
+	local spleef_node_id = minetest.get_content_id(nodename)
 	local tppos = {}
 
 	for i=1,nlevels*space do
@@ -199,6 +199,11 @@ minetest.chat_send_player(player:get_player_name(),"Spleef teleporter not set !"
 end
 minetest.register_node("spleef:teleporter",goldblockNode)
 
+local dirtNode = copy_table(minetest.registered_nodes["default:dirt"]) -- copy table to add stuff
+dirtNode.description = "spleef snow"
+dirtNode.tiles = {"default_snow.png"}
+minetest.register_node("spleef:snow",dirtNode)
+
 minetest.register_privilege("spleef", "Player can create a spleef arena")
 
 minetest.register_chatcommand("spleef", {
@@ -261,7 +266,7 @@ minetest.register_chatcommand("spleef", {
 			minetest.log("info","[spleef] Invalid parameter [square|circle] !")
 			return false, "[spleef] Invalid parameter [square|circle] !"
 		end
-		local nodename = "dirt"
+		local nodename = "spleef:snow"
 
 		placespleef(playerpos,facedir,spleef_size,space,nlevels,nodename,spleef_mode)
 
