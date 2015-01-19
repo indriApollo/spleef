@@ -37,8 +37,7 @@ spleef.restoreTerrain = function(file_name)
 	for i in area:iterp(pos1, pos2) do
 		nodes[i] = minetest.get_content_id(nodenames[i]) -- old nodes back in nodes table
 	end
-	print("id "..minetest.get_content_id("foo:bar"))
-	print('name '..minetest.get_name_from_content_id(127))
+	
 	-- write changes to map
 	manip:set_data(nodes)
 	manip:write_to_map()
