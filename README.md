@@ -45,9 +45,6 @@ default (spleef_arena)
 Licence :
 ---------
 lgpl 2.1
-Download :
-----------
-https://github.com/indriApollo/spleef/a ... master.zip
 Installation:
 -------------
 Unzip the file and rename it to "spleef". Then move it to the mod directory.
