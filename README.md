@@ -4,7 +4,7 @@ spleef
 
 A spleef mini game for Minetest
 
-This mod allows you to generate spleef arenas with to-the-top teleporters an a water/lava  pool.
+This mod allows you to generate spleef arenas with to-the-top teleporters and a water/lava  pool.
 You can set the number of levels, the space between them and their width.
 The teleporter moves the players to the top of the active spleef on right click.
 You can either make rectangular(default) or circular levels.
